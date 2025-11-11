@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int totalCookies, cookiesPerBox, boxesPerContainer;
+    int totalBoxes, totalContainers, remainingCookies, remainingBoxes;
+
+    // Input from user
+    printf("Enter the total number of cookies: ");
+    scanf("%d", &totalCookies);
+
+    printf("Enter the number of cookies in each box: ");
+    scanf("%d", &cookiesPerBox);
+
+    printf("Enter the number of boxes in each container: ");
+    scanf("%d", &boxesPerContainer);
+
+    // Calculate total boxes and remaining cookies
+    totalBoxes = totalCookies / cookiesPerBox;
+    remainingCookies = totalCookies % cookiesPerBox;
+
+    // Calculate total containers and remaining boxes
+    totalContainers = totalBoxes / boxesPerContainer;
+    remainingBoxes = totalBoxes % boxesPerContainer;
+
+    // Display results
+    printf("\nTotal boxes needed: %d\n", totalBoxes);
+    printf("Total containers needed: %d\n", totalContainers);
+    printf("Remaining boxes (not filling a container): %d\n", remainingBoxes);
+    printf("Remaining cookies (not filling a box): %d\n", remainingCookies);
+
+    return 0;
+}
